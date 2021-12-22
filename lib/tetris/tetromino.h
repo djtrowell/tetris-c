@@ -1,8 +1,10 @@
 #ifndef TETROMINO
 #define TETROMINO
 
+#include "../types/bool.h"
+
 struct tetromino {
-	char block[32];
+	bool block[32];
 	unsigned short rotationPoint;
 };
 
