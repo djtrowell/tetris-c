@@ -45,7 +45,6 @@ void draw_redraw(char state[BOARD_HEIGHT][BOARD_WIDTH]) {
 	for (int i = 0; i < BOARD_HEIGHT; i++) { for (int j = 0; j < BOARD_WIDTH; j++) { changeState[i][j] = currentState[i][j] ^ state[i][j]; } }
 	for (int i = 0; i < BOARD_HEIGHT; i++) { if (sumArray(changeState[i], sizeof(changeState[i]) / sizeof(char)) > 0) {
 		printf("%s%s\x1B[%iB%s", cursor_restorePos(), cursor_up(1), i + 1, genRow(state[i]));
-		printf("%sRedrawn%c", cursor_right(4));
 	} }
 
 }
